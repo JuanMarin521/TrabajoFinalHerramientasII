@@ -65,9 +65,9 @@
             this.Usuario.AutoSize = true;
             this.Usuario.Location = new System.Drawing.Point(83, 142);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(43, 13);
+            this.Usuario.Size = new System.Drawing.Size(44, 13);
             this.Usuario.TabIndex = 3;
-            this.Usuario.Text = "Usuario";
+            this.Usuario.Text = "Nombre";
             // 
             // label2
             // 

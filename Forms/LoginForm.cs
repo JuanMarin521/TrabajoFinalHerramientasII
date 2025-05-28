@@ -17,52 +17,57 @@ namespace Trabajo_final_herramientas_II.Forms
         private readonly UsuarioRepository usuarioRepository = new UsuarioRepository();
 
         private Usuario _usuario;
-        public LoginForm(Usuario usuario)
+        public LoginForm()
         {
             InitializeComponent();
-            _usuario = usuario;
         }
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = txtUsuario.Text.Trim();
-            string contraseña = txtPassword.Text;
+            try {
+                string nombreUsuario = txtUsuario.Text.Trim();
+                string contraseña = txtPassword.Text;
 
-            if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
-            {
-                MessageBox.Show("Por favor, completa todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            Usuario usuario = usuarioRepository.ValidarCredenciales(nombreUsuario, contraseña);
-
-            if (usuario != null)
-            {
-                MessageBox.Show($"Bienvenido {usuario.Nombre}. Rol: {usuario.Rol}", "Éxito");
-
-                this.Hide();
-
-                // Abrir el formulario correspondiente según el rol
-                switch (usuario.Rol)
+                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
                 {
-                    case "Administrador":
-                        new FormAdministrador().Show();
-                        break;
-                    case "Instructor":
-                        new FormInstructor().Show();
-                        break;
-                    case "Cliente":
-                        new FormClientes().Show(); 
-                        break;
-                    default:
-                        MessageBox.Show("Rol no reconocido.");
-                        break;
+                    MessageBox.Show("Por favor, completa todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Usuario usuario = usuarioRepository.ValidarCredenciales(nombreUsuario, contraseña);
+
+                if (usuario != null)
+                {
+                    MessageBox.Show($"Bienvenido {usuario.Nombre}. Rol: {usuario.Rol}", "Éxito");
+
+                    this.Hide();
+
+                    // Abrir el formulario correspondiente según el rol
+                    switch (usuario.Rol)
+                    {
+                        case "Administrador":
+                            // new FormAdministrador().Show();
+                            break;
+                        case "Instructor":
+                            // new FormInstructor().Show();
+                            break;
+                        case "Cliente":
+                            new FormClientes().Show();
+                            break;
+                        default:
+                            MessageBox.Show("Rol no reconocido.");
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales inválidas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Credenciales inválidas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     

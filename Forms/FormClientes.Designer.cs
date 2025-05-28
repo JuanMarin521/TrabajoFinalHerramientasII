@@ -157,9 +157,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(302, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 13);
+            this.label5.Size = new System.Drawing.Size(176, 13);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Registro de datos de cliente";
+            this.label5.Text = "Registro de datos de cliente (admin)";
             // 
             // FormClientes
             // 
