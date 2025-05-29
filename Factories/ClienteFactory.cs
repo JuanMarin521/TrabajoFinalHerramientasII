@@ -8,7 +8,7 @@ namespace Trabajo_final_herramientas_II.Factories
         {
             return new Cliente
             {
-                Nombre = nombre,
+                UsuarioNombre = nombre,
                 Apellido = apellido,
                 Telefono = telefono,
                 TipoMembresia = tipoMembresia

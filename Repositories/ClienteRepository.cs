@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Trabajo_final_herramientas_II.Models;
 using Trabajo_final_herramientas_II.Data; // Aquí está el DatabaseSingleton
+using Trabajo_final_herramientas_II.Repositories;
 
 namespace Trabajo_final_herramientas_II.Repositories
 {
@@ -32,8 +33,8 @@ namespace Trabajo_final_herramientas_II.Repositories
                     {
                         clientes.Add(new Cliente
                         {
-                            ClienteID = Convert.ToInt32(reader["ClienteID"]),
-                            Nombre = reader["Nombre"].ToString(),
+                            UsuarioID = Convert.ToInt32(reader["ClienteID"]),
+                            UsuarioNombre = reader["Nombre"].ToString(),
                             Apellido = reader["Apellido"].ToString(),
                             Telefono = reader["Telefono"].ToString(),
                             TipoMembresia = reader["TipoMembresia"].ToString()
@@ -47,20 +48,20 @@ namespace Trabajo_final_herramientas_II.Repositories
 
         public bool Insertar(Cliente cliente)
         {
-            string query = @"INSERT INTO Clientes (Nombre, Apellido, Telefono, TipoMembresia)
-                             VALUES (@Nombre, @Apellido, @Telefono, @TipoMembresia)";
+            string query = "INSERT INTO Clientes (Nombre, Apellido, Telefono, TipoMembresia) VALUES (@Nombre, @Apellido, @Telefono, @TipoMembresia)";
 
-            using (SqlCommand command = new SqlCommand(query, connection))
+            using (SqlCommand cmd = new SqlCommand(query, connection))
             {
-                command.Parameters.AddWithValue("@Nombre", cliente.Nombre);
-                command.Parameters.AddWithValue("@Apellido", cliente.Apellido);
-                command.Parameters.AddWithValue("@Telefono", cliente.Telefono);
-                command.Parameters.AddWithValue("@TipoMembresia", cliente.TipoMembresia);
+                cmd.Parameters.AddWithValue("@Nombre", cliente.UsuarioNombre);
+                cmd.Parameters.AddWithValue("@Apellido", cliente.Apellido);
+                cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
+                cmd.Parameters.AddWithValue("@TipoMembresia", cliente.TipoMembresia);
 
                 if (connection.State != ConnectionState.Open)
                     connection.Open();
 
-                return command.ExecuteNonQuery() > 0;
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
             }
         }
 
@@ -72,10 +73,8 @@ namespace Trabajo_final_herramientas_II.Repositories
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                command.Parameters.AddWithValue("@ClienteID", cliente.ClienteID);
-                // Asegúrate de que tienes la directiva using correcta para la clase Cliente
-                // Agrega esto al inicio del archivo si no está presente:
-                command.Parameters.AddWithValue("@Nombre", cliente.Nombre);
+                command.Parameters.AddWithValue("@ClienteID", cliente.UsuarioID);
+                command.Parameters.AddWithValue("@Nombre", cliente.UsuarioNombre);
                 command.Parameters.AddWithValue("@Apellido", cliente.Apellido);
                 command.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                 command.Parameters.AddWithValue("@TipoMembresia", cliente.TipoMembresia);
@@ -120,8 +119,8 @@ namespace Trabajo_final_herramientas_II.Repositories
                     {
                         clientes.Add(new Cliente
                         {
-                            ClienteID = Convert.ToInt32(reader["ClienteID"]),
-                            Nombre = reader["Nombre"].ToString(),
+                            UsuarioID = Convert.ToInt32(reader["ClienteID"]),
+                            UsuarioNombre = reader["Nombre"].ToString(),
                             Apellido = reader["Apellido"].ToString(),
                             Telefono = reader["Telefono"].ToString(),
                             TipoMembresia = reader["TipoMembresia"].ToString()
@@ -150,8 +149,8 @@ namespace Trabajo_final_herramientas_II.Repositories
                     {
                         return new Cliente
                         {
-                            ClienteID = Convert.ToInt32(reader["ClienteID"]),
-                            Nombre = reader["Nombre"].ToString(),
+                            UsuarioID = Convert.ToInt32(reader["ClienteID"]),
+                            UsuarioNombre = reader["UsuarioNombre"].ToString(),
                             Apellido = reader["Apellido"].ToString(),
                             Telefono = reader["Telefono"].ToString(),
                             TipoMembresia = reader["TipoMembresia"].ToString()
@@ -163,7 +162,32 @@ namespace Trabajo_final_herramientas_II.Repositories
             return null;
         }
 
+        public Cliente ObtenerPorUsuarioID(int usuarioID)
+        {
+            using (var connection = new SqlConnection("Data Source=DESKTOP-0KBBNKK;Initial Catalog=Herramientas;Integrated Security=True"))
+            {
+                string query = "SELECT * FROM Clientes WHERE UsuarioID = @usuarioID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@usuarioID", usuarioID);
 
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new Cliente
+                    {
+                        UsuarioNombre = reader["Nombre"].ToString(),
+                        Apellido = reader["Apellido"].ToString(),
+                        Telefono = reader["Telefono"].ToString(),
+                        TipoMembresia = reader["TipoMembresia"].ToString()
+                    };
+                }
+            }
+
+            return null;
+        }
 
     }
+   
 }

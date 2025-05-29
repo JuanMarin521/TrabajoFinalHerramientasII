@@ -128,6 +128,7 @@
             this.Controls.Add(this.lblBienvenida);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
+            this.Load += new System.EventHandler(this.FormUsuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClases)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInscritas)).EndInit();
             this.ResumeLayout(false);

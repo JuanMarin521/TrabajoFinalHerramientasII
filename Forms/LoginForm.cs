@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_final_herramientas_II.Models;
 using Trabajo_final_herramientas_II.Repositories;
@@ -16,30 +9,29 @@ namespace Trabajo_final_herramientas_II.Forms
     {
         private readonly UsuarioRepository usuarioRepository = new UsuarioRepository();
 
-        private Usuario _usuario;
         public LoginForm()
         {
             InitializeComponent();
         }
 
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try {
-                string nombreUsuario = txtUsuario.Text.Trim();
+            try
+            {
+                string username = txtUsuario.Text.Trim();
                 string contraseña = txtPassword.Text;
 
-                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(contraseña))
                 {
                     MessageBox.Show("Por favor, completa todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                Usuario usuario = usuarioRepository.ValidarCredenciales(nombreUsuario, contraseña);
+                Usuario usuario = usuarioRepository.ValidarCredenciales(username, contraseña);
 
                 if (usuario != null)
                 {
-                    MessageBox.Show($"Bienvenido {usuario.Nombre}. Rol: {usuario.Rol}", "Éxito");
+                    MessageBox.Show($"Bienvenido {usuario.UsuarioNombre}. Rol: {usuario.Rol}", "Éxito");
 
                     this.Hide();
 
@@ -47,13 +39,25 @@ namespace Trabajo_final_herramientas_II.Forms
                     switch (usuario.Rol)
                     {
                         case "Administrador":
-                            // new FormAdministrador().Show();
+                           // new FormAdministrador().Show();
                             break;
                         case "Instructor":
-                            // new FormInstructor().Show();
+                           // new FormInstructor().Show();
                             break;
                         case "Cliente":
-                            new FormClientes().Show();
+                            ClienteRepository clienteRepo = new ClienteRepository();
+                            Cliente cliente = clienteRepo.ObtenerPorUsuarioID(usuario.UsuarioID);
+
+                            if (cliente != null)
+                            {
+                                FormUsuario formUsuario = new FormUsuario(cliente);
+                                formUsuario.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontró al cliente en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                this.Show();
+                            }
                             break;
                         default:
                             MessageBox.Show("Rol no reconocido.");
@@ -70,8 +74,6 @@ namespace Trabajo_final_herramientas_II.Forms
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
-
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -84,6 +86,6 @@ namespace Trabajo_final_herramientas_II.Forms
             formRegistro.ShowDialog();
         }
     }
-    // Add a constructor to FormClientes that accepts a Usuario parameter
-    
 }
+
+

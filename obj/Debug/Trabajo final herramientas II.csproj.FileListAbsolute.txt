@@ -7,7 +7,6 @@ C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo fina
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo final herramientas II.csproj.CoreCompileInputs.cache
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo final herramientas II.exe
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo final herramientas II.pdb
-C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.FormClientes.resources
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.Forms.LoginForm.resources
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.Forms.FormUsuario.resources
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.Forms.FormRegistroCliente.resources

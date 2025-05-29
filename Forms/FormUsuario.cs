@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabajo_final_herramientas_II.Repositories;
+using Trabajo_final_herramientas_II.Models;
 
 
 namespace Trabajo_final_herramientas_II.Forms
@@ -116,6 +117,11 @@ namespace Trabajo_final_herramientas_II.Forms
             {
                 MessageBox.Show("Error al cancelar inscripción: " + ex.Message);
             }
+
+        }
+
+        private void FormUsuario_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

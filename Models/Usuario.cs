@@ -9,9 +9,9 @@ namespace Trabajo_final_herramientas_II.Models
     public abstract class Usuario
     {
         public int UsuarioID { get; set; }
-        public string Nombre { get; set; }
+        public string UsuarioNombre { get; set; }
         public string Contraseña { get; set; } 
-        public string Rol { get; protected set; }
+        public string Rol { get; set; }
         public string Telefono { get; set; }
         public string Apellido { get; set; }
 
