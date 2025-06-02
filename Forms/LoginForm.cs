@@ -39,12 +39,16 @@ namespace Trabajo_final_herramientas_II.Forms
                     switch (usuario.Rol)
                     {
                         case "Administrador":
-                           // new FormAdministrador().Show();
+                            FormAdministrador formAdmin = new FormAdministrador();
+                            formAdmin.Show();   
                             break;
                         case "Instructor":
-                           // new FormInstructor().Show();
+                            FormInstructor formInstructor = new FormInstructor();
+                            formInstructor.Show();
                             break;
                         case "Cliente":
+                            FormUsuario formUsuario1 = new FormUsuario(null);
+                            formUsuario1.Show();
                             ClienteRepository clienteRepo = new ClienteRepository();
                             Cliente cliente = clienteRepo.ObtenerPorUsuarioID(usuario.UsuarioID);
 

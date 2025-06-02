@@ -118,5 +118,15 @@ namespace Trabajo_final_herramientas_II.Forms
                 MessageBox.Show("Error al registrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       }
+
+        private void cmbMembresia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRegistroCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

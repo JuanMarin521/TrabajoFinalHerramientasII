@@ -10,3 +10,17 @@ C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo fina
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.Forms.LoginForm.resources
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.Forms.FormUsuario.resources
 C:\Users\walte\source\repos\Trabajo final herramientas II\obj\Debug\Trabajo_final_herramientas_II.Forms.FormRegistroCliente.resources
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\bin\Debug\Trabajo final herramientas II.exe.config
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\bin\Debug\Trabajo final herramientas II.exe
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\bin\Debug\Trabajo final herramientas II.pdb
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo_final_herramientas_II.Forms.FormRegistroCliente.resources
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo_final_herramientas_II.Forms.FormUsuario.resources
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo_final_herramientas_II.Forms.LoginForm.resources
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo_final_herramientas_II.Properties.Resources.resources
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.exe
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.pdb
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo_final_herramientas_II.Forms.FormInstructor.resources
+C:\Users\User\Source\Repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo_final_herramientas_II.Forms.FormAdministrador.resources

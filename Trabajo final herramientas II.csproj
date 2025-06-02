@@ -50,6 +50,24 @@
     <Compile Include="Data\DatabaseSingleton.cs" />
     <Compile Include="Factories\ClienteFactory.cs" />
     <Compile Include="Factories\UsuarioFactory.cs" />
+    <Compile Include="Forms\FormAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdministrador.Designer.cs">
+      <DependentUpon>FormAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdminUses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdminUses.Designer.cs">
+      <DependentUpon>FormAdminUses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormInstructor.Designer.cs">
+      <DependentUpon>FormInstructor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormRegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +98,15 @@
     <Compile Include="Repositories\ClasesInscritasRepository.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\UsuarioRepository.cs" />
+    <EmbeddedResource Include="Forms\FormAdministrador.resx">
+      <DependentUpon>FormAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdminUses.resx">
+      <DependentUpon>FormAdminUses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInstructor.resx">
+      <DependentUpon>FormInstructor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormRegistroCliente.resx">
       <DependentUpon>FormRegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +141,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abstract frame technology futuristic interface hud design _ Premium Vector.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Free Vector _ Background luxury minimalist gradient style design.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6,430,000+ Structure Pictures.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

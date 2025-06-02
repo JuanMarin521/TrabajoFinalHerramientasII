@@ -59,5 +59,35 @@ namespace Trabajo_final_herramientas_II.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6_430_000__Structure_Pictures {
+            get {
+                object obj = ResourceManager.GetObject("6,430,000+ Structure Pictures", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Abstract_frame_technology_futuristic_interface_hud_design___Premium_Vector {
+            get {
+                object obj = ResourceManager.GetObject("Abstract frame technology futuristic interface hud design _ Premium Vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Free_Vector___Background_luxury_minimalist_gradient_style_design {
+            get {
+                object obj = ResourceManager.GetObject("Free Vector _ Background luxury minimalist gradient style design", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

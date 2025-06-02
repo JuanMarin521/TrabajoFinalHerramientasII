@@ -43,17 +43,23 @@
             // lblBienvenida
             // 
             this.lblBienvenida.AutoSize = true;
-            this.lblBienvenida.Location = new System.Drawing.Point(73, 31);
+            this.lblBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.ForeColor = System.Drawing.Color.White;
+            this.lblBienvenida.Location = new System.Drawing.Point(98, 47);
+            this.lblBienvenida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(60, 13);
+            this.lblBienvenida.Size = new System.Drawing.Size(157, 32);
             this.lblBienvenida.TabIndex = 0;
             this.lblBienvenida.Text = "Bienvenido";
             // 
             // btnGestionar
             // 
-            this.btnGestionar.Location = new System.Drawing.Point(445, 210);
+            this.btnGestionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionar.ForeColor = System.Drawing.Color.Black;
+            this.btnGestionar.Location = new System.Drawing.Point(552, 259);
+            this.btnGestionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGestionar.Name = "btnGestionar";
-            this.btnGestionar.Size = new System.Drawing.Size(75, 23);
+            this.btnGestionar.Size = new System.Drawing.Size(141, 29);
             this.btnGestionar.TabIndex = 1;
             this.btnGestionar.Text = "Gestionar";
             this.btnGestionar.UseVisualStyleBackColor = true;
@@ -62,16 +68,21 @@
             // dgvClases
             // 
             this.dgvClases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClases.Location = new System.Drawing.Point(76, 140);
+            this.dgvClases.Location = new System.Drawing.Point(101, 172);
+            this.dgvClases.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvClases.Name = "dgvClases";
-            this.dgvClases.Size = new System.Drawing.Size(444, 64);
+            this.dgvClases.RowHeadersWidth = 51;
+            this.dgvClases.Size = new System.Drawing.Size(592, 79);
             this.dgvClases.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(76, 220);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(101, 271);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(141, 29);
             this.button1.TabIndex = 3;
             this.button1.Text = "Inscribirse";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,34 +91,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 103);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(97, 127);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(253, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Clases disponibles";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 293);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(97, 361);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(213, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Clases inscritas";
             // 
             // dgvInscritas
             // 
             this.dgvInscritas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInscritas.Location = new System.Drawing.Point(76, 319);
+            this.dgvInscritas.Location = new System.Drawing.Point(101, 393);
+            this.dgvInscritas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvInscritas.Name = "dgvInscritas";
-            this.dgvInscritas.Size = new System.Drawing.Size(444, 64);
+            this.dgvInscritas.RowHeadersWidth = 51;
+            this.dgvInscritas.Size = new System.Drawing.Size(592, 79);
             this.dgvInscritas.TabIndex = 6;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(76, 401);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(101, 494);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(121, 31);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -115,9 +136,10 @@
             // 
             // FormUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dgvInscritas);
             this.Controls.Add(this.label2);
@@ -126,6 +148,7 @@
             this.Controls.Add(this.dgvClases);
             this.Controls.Add(this.btnGestionar);
             this.Controls.Add(this.lblBienvenida);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
             this.Load += new System.EventHandler(this.FormUsuario_Load_1);
