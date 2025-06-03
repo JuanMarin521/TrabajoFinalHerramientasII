@@ -10,6 +10,8 @@ namespace Trabajo_final_herramientas_II.Models
     {
         public int UsuarioID { get; set; }
         public string UsuarioNombre { get; set; }
+
+        public string UsuarioLogin { get; set; }
         public string Contraseña { get; set; } 
         public string Rol { get; set; }
         public string Telefono { get; set; }

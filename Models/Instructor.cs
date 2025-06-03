@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Trabajo_final_herramientas_II.Models
 {
     internal class Instructor : Usuario
     {
+        public int InstructorID { get; set; } // ✅ Necesario para identificar en BD
         public string Especialidad { get; set; }
         public bool Disponible { get; set; }
 

@@ -17,6 +17,25 @@ namespace Trabajo_final_herramientas_II.Repositories
             connection = DatabaseSingleton.Instance.Connection;
         }
 
+        public void AgregarClase(Clase clase)
+        {
+            string query = @"INSERT INTO Clases (Nombre, Horario, CupoDisponible, Sala)
+                     VALUES (@nombre, @horario, @cupo, @sala)";
+
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
+
+                cmd.Parameters.AddWithValue("@nombre", clase.Nombre);
+                cmd.Parameters.AddWithValue("@horario", clase.Horario);
+                cmd.Parameters.AddWithValue("@cupo", clase.CupoDisponible);
+                cmd.Parameters.AddWithValue("@sala", clase.Sala);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public List<Clase> ObtenerDisponibles()
         {
             List<Clase> clases = new List<Clase>();

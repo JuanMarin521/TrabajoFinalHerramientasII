@@ -48,10 +48,10 @@ namespace Trabajo_final_herramientas_II.Repositories
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
-                cmd.Parameters.AddWithValue("@usuario", nombreUsuario); // Usar nombreUsuario como "Usuario"
-                cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario); // Puedes ajustar si tienes otro campo para NombreUsuario
+                cmd.Parameters.AddWithValue("@usuario", nombreUsuario); 
+                cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario); 
                 cmd.Parameters.AddWithValue("@contraseña", contraseña);
-                cmd.Parameters.AddWithValue("@rol", rol); // Aquí debe ser "Cliente", "Instructor" o "Administrador"
+                cmd.Parameters.AddWithValue("@rol", rol); 
 
                 con.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
