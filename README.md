@@ -61,6 +61,7 @@ habilidades técnicas y de coordinación, aprendiendo a dividir responsabilidade
 a mantener una estructura clara en el código. En resumen, el proyecto cumplió
 con sus objetivos y nos dejó una base sólida para futuros desarrollos, además de
 reafirmar la importancia del trabajo en equipo para alcanzar resultados efectivos.
+
 ![image](https://github.com/user-attachments/assets/9ed83146-3c6f-4b75-a544-d34f6d9c5578)
 ![image](https://github.com/user-attachments/assets/724938f5-eec4-4875-8fd5-291e760f9909)
 ![image](https://github.com/user-attachments/assets/c13ff009-e9cf-4490-8667-97491711435e)
