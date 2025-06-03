@@ -123,6 +123,7 @@ namespace Trabajo_final_herramientas_II.Forms
                 instructorEdit.Especialidad = txtEspecialidad.Text;
                 instructorEdit.Disponible = chkDisponible.Checked;
 
+                InstructorRepository Repo = new InstructorRepository();
                 Repo.Editar(instructorEdit);
                 MessageBox.Show("Instructor editado correctamente.");
                 CargarInstructores();
@@ -280,6 +281,11 @@ namespace Trabajo_final_herramientas_II.Forms
             {
                 MessageBox.Show("Error al agregar la clase: " + ex.Message);
             }
+        }
+
+        private void FormAdminUses_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

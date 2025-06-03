@@ -2,7 +2,7 @@
 
 namespace Trabajo_final_herramientas_II.Models
 {
-    internal class Instructor : Usuario
+    public class Instructor : Usuario
     {
         public int InstructorID { get; set; } // ✅ Necesario para identificar en BD
         public string Especialidad { get; set; }
