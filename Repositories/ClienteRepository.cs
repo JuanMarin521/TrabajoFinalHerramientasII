@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Trabajo_final_herramientas_II.Models;
-using Trabajo_final_herramientas_II.Data; // Aquí está el DatabaseSingleton
+using Trabajo_final_herramientas_II.Data; 
 using Trabajo_final_herramientas_II.Repositories;
 
 namespace Trabajo_final_herramientas_II.Repositories

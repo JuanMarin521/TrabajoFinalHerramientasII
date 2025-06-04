@@ -4,7 +4,8 @@ namespace Trabajo_final_herramientas_II.Models
 {
     public class Instructor : Usuario
     {
-        public int InstructorID { get; set; } // ✅ Necesario para identificar en BD
+        public int InstructorID { get; set; }
+
         public string Especialidad { get; set; }
         public bool Disponible { get; set; }
 

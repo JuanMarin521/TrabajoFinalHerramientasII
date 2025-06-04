@@ -3,96 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\data\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:data\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\forminstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\forminstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadminuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadminuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadminuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadminuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|c:\\users\\pablo\\source\\repos\\trabajofinalherramientasii\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|c:\\users\\pablo\\source\\repos\\trabajofinalherramientasii\\repositories\\claserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\claserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|c:\\users\\pablo\\source\\repos\\trabajofinalherramientasii\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formregistrocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formregistrocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\data\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:data\\databasesingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadminuses.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadminuses.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\forminstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\forminstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formregistrocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formregistrocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\instructorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\clasesinscritasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\clasesinscritasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\repositories\\claserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:repositories\\claserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\forminstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\forminstructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\models\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:models\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\factories\\usuariofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:factories\\usuariofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\factories\\clientefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:factories\\clientefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\models\\clase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:models\\clase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\forms\\formadminuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:forms\\formadminuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D72A383A-1E58-4C0A-9DDB-3246CAE31E59}|Trabajo final herramientas II.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,8 +82,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 14,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClaseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ClaseRepository.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClaseRepository.cs",
+              "RelativeToolTip": "Repositories\\ClaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:40:10.111Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -150,288 +143,210 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormUsuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormUsuario.cs",
-              "RelativeDocumentMoniker": "Forms\\FormUsuario.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormUsuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\FormUsuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:23:27.626Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClienteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClienteRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ClienteRepository.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClienteRepository.cs",
-              "RelativeToolTip": "Repositories\\ClienteRepository.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAIwKcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:31:38.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormUsuario.cs",
-              "RelativeDocumentMoniker": "Forms\\FormUsuario.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormUsuario.cs",
-              "RelativeToolTip": "Forms\\FormUsuario.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAnwDAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:01:23.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs",
-              "RelativeToolTip": "Forms\\LoginForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:05:54.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormAdministrador.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdministrador.cs",
-              "RelativeDocumentMoniker": "Forms\\FormAdministrador.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdministrador.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\FormAdministrador.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:54:16.025Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseSingleton.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Data\\DatabaseSingleton.cs",
-              "RelativeDocumentMoniker": "Data\\DatabaseSingleton.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Data\\DatabaseSingleton.cs",
-              "RelativeToolTip": "Data\\DatabaseSingleton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:53:16.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormInstructor.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormInstructor.cs",
-              "RelativeDocumentMoniker": "Forms\\FormInstructor.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormInstructor.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\FormInstructor.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:00:47.372Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Forms\\LoginForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:23:28.444Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "FormAdminUses.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.cs",
               "RelativeDocumentMoniker": "Forms\\FormAdminUses.cs",
               "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.cs [Dise\u00F1o]",
               "RelativeToolTip": "Forms\\FormAdminUses.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:29:10.139Z",
+              "WhenOpened": "2025-06-04T15:12:24.29Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormAdministrador.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdministrador.cs",
-              "RelativeDocumentMoniker": "Forms\\FormAdministrador.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdministrador.cs",
-              "RelativeToolTip": "Forms\\FormAdministrador.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAawCgAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "InstructorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\InstructorRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\InstructorRepository.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\InstructorRepository.cs",
+              "RelativeToolTip": "Repositories\\InstructorRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvyAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:55:54.684Z",
+              "WhenOpened": "2025-06-04T15:16:25.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
+              "Title": "FormAdminUses.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.cs",
+              "RelativeDocumentMoniker": "Forms\\FormAdminUses.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.cs",
+              "RelativeToolTip": "Forms\\FormAdminUses.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAjwJEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T15:12:30.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:01:48.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Instructor.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Instructor.cs",
+              "RelativeDocumentMoniker": "Models\\Instructor.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Instructor.cs",
+              "RelativeToolTip": "Models\\Instructor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T15:43:31.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
               "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\UsuarioRepository.cs",
               "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:56:50.301Z",
+              "WhenOpened": "2025-06-04T16:42:37.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
+              "Title": "FormAdministrador.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdministrador.cs",
+              "RelativeDocumentMoniker": "Forms\\FormAdministrador.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdministrador.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Forms\\FormAdministrador.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T15:10:22.112Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "Forms\\LoginForm.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB0AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:34:21.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "FormRegistroCliente.cs",
               "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormRegistroCliente.cs",
               "RelativeDocumentMoniker": "Forms\\FormRegistroCliente.cs",
               "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormRegistroCliente.cs",
               "RelativeToolTip": "Forms\\FormRegistroCliente.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAtwCwAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:56:43.158Z",
+              "WhenOpened": "2025-06-04T17:32:19.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DatabaseSingleton.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Data\\DatabaseSingleton.cs",
+              "RelativeDocumentMoniker": "Data\\DatabaseSingleton.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Data\\DatabaseSingleton.cs",
+              "RelativeToolTip": "Data\\DatabaseSingleton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:25:36.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormAdminUses.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\FormAdminUses.Designer.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.Designer.cs",
+              "RelativeToolTip": "Forms\\FormAdminUses.Designer.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAD4v3cAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:18:56.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "FormInstructor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormInstructor.cs",
+              "RelativeDocumentMoniker": "Forms\\FormInstructor.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormInstructor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Forms\\FormInstructor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T17:18:48.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "FormRegistroCliente.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormRegistroCliente.cs",
               "RelativeDocumentMoniker": "Forms\\FormRegistroCliente.cs",
               "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormRegistroCliente.cs [Dise\u00F1o]",
               "RelativeToolTip": "Forms\\FormRegistroCliente.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:08:57.917Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "InstructorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\InstructorRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\InstructorRepository.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\InstructorRepository.cs",
-              "RelativeToolTip": "Repositories\\InstructorRepository.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:31:21.393Z"
+              "WhenOpened": "2025-06-04T16:36:49.296Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ClasesInscritasRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClasesInscritasRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ClasesInscritasRepository.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClasesInscritasRepository.cs",
-              "RelativeToolTip": "Repositories\\ClasesInscritasRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAxAAAAAAAAAA==",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:56:35.609Z"
+              "WhenOpened": "2025-06-04T15:44:09.967Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "ClaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClaseRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ClaseRepository.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Repositories\\ClaseRepository.cs",
-              "RelativeToolTip": "Repositories\\ClaseRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Title": "FormUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormUsuario.cs",
+              "RelativeDocumentMoniker": "Forms\\FormUsuario.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Forms\\FormUsuario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:29:18.98Z"
+              "WhenOpened": "2025-06-04T16:36:47.325Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "FormInstructor.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormInstructor.cs",
-              "RelativeDocumentMoniker": "Forms\\FormInstructor.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormInstructor.cs",
-              "RelativeToolTip": "Forms\\FormInstructor.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAD4vxoAAAAAAAAAAAAAAA==",
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Forms\\LoginForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T22:00:52.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T16:36:46.215Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Administrador.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Administrador.cs",
-              "RelativeDocumentMoniker": "Models\\Administrador.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Administrador.cs",
-              "RelativeToolTip": "Models\\Administrador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:25:06.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UsuarioFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Factories\\UsuarioFactory.cs",
-              "RelativeDocumentMoniker": "Factories\\UsuarioFactory.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Factories\\UsuarioFactory.cs",
-              "RelativeToolTip": "Factories\\UsuarioFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:55:47.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ClienteFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Factories\\ClienteFactory.cs",
-              "RelativeDocumentMoniker": "Factories\\ClienteFactory.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Factories\\ClienteFactory.cs",
-              "RelativeToolTip": "Factories\\ClienteFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:55:45.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Clase.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Clase.cs",
-              "RelativeDocumentMoniker": "Models\\Clase.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Clase.cs",
-              "RelativeToolTip": "Models\\Clase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T21:25:07.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FormAdminUses.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.cs",
-              "RelativeDocumentMoniker": "Forms\\FormAdminUses.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Forms\\FormAdminUses.cs",
-              "RelativeToolTip": "Forms\\FormAdminUses.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:32:12.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Instructor.cs",
-              "DocumentMoniker": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Instructor.cs",
-              "RelativeDocumentMoniker": "Models\\Instructor.cs",
-              "ToolTip": "C:\\Users\\Pablo\\source\\repos\\TrabajoFinalHerramientasII\\Models\\Instructor.cs",
-              "RelativeToolTip": "Models\\Instructor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:46:17.74Z"
+              "WhenOpened": "2025-06-04T15:44:07.226Z"
             }
           ]
         },

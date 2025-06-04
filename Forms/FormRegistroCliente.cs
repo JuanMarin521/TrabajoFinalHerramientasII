@@ -17,13 +17,15 @@ namespace Trabajo_final_herramientas_II.Forms
 {
     public partial class FormRegistroCliente : Form
     {
-        private readonly ClienteRepository _clienteRepository = new ClienteRepository();
+        private readonly ClienteRepository ClienteRepository = new ClienteRepository();
+
         private readonly string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
         public FormRegistroCliente()
         {
             InitializeComponent();
-            Repositories.ClienteRepository repo = new Repositories.ClienteRepository();
         }
+// Elimina la siguiente línea innecesaria y errónea del constructor:
+// Repositories.ClienteRepository repo = new Repositories.ClienteRepository();
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {

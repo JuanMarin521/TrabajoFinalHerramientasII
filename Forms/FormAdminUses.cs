@@ -18,6 +18,13 @@ namespace Trabajo_final_herramientas_II.Forms
         private ClienteRepository ClienteRepository = new ClienteRepository();
         private ClaseRepository ClaseRepository = new ClaseRepository();
 
+        private UsuarioRepository usuarioRepository = new UsuarioRepository();
+        private ClienteRepository clienteRepository = new ClienteRepository();
+
+        //Variables de instructores
+        private InstructorRepository repoInstructor = new InstructorRepository();
+        private Instructor instructorSeleccionado = null;
+
         public FormAdminUses()
         {
             InitializeComponent();
@@ -25,29 +32,49 @@ namespace Trabajo_final_herramientas_II.Forms
 
         }
 
-        private void btnAddClient_Click(object sender, EventArgs e)
+        private void BtnAddClient_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtClienteUsuario.Text) ||
-       string.IsNullOrWhiteSpace(txtClienteNombre.Text) ||
-       string.IsNullOrWhiteSpace(txtClientePassword.Text))
+            string.IsNullOrWhiteSpace(txtClienteNombre.Text) ||
+            string.IsNullOrWhiteSpace(txtClienteApellido.Text) ||
+            string.IsNullOrWhiteSpace(txtClientePassword.Text) ||
+            string.IsNullOrWhiteSpace(txtClienteTelefono.Text) ||
+            cmbClienteMembresia.SelectedItem == null)
             {
-                MessageBox.Show("Completa todos los campos obligatorios.");
+                MessageBox.Show("Por favor, completa todos los campos obligatorios.");
                 return;
             }
 
-            Cliente nuevoCliente = new Cliente()
-            {
-                UsuarioLogin = txtClienteUsuario.Text.Trim(),
-                UsuarioNombre = txtClienteNombre.Text.Trim(),
-                Contraseña = txtClientePassword.Text.Trim(),
-                Telefono = txtClienteTelefono.Text.Trim()
-            };
-
             try
             {
-                ClienteRepository.Insertar(nuevoCliente);
+                // Paso 1: Insertar en la tabla Usuarios
+                bool usuarioRegistrado = usuarioRepository.RegistrarUsuario(
+                    txtClienteUsuario.Text.Trim(),
+                    txtClienteNombre.Text.Trim() + " " + txtClienteApellido.Text.Trim(),
+                    txtClientePassword.Text.Trim(),
+                    "Cliente" // Rol
+                );
+
+                if (!usuarioRegistrado)
+                {
+                    MessageBox.Show("No se pudo registrar el usuario.");
+                    return;
+                }
+
+                // Paso 2: Insertar en la tabla Clientes (usando solo lo necesario)
+                Cliente nuevoCliente = new Cliente
+                {
+                    UsuarioLogin = txtClienteUsuario.Text.Trim(),
+                    UsuarioNombre = txtClienteNombre.Text.Trim() + " " + txtClienteApellido.Text.Trim(),
+                    Contraseña = txtClientePassword.Text.Trim(),
+                    Telefono = txtClienteTelefono.Text.Trim(),
+                    TipoMembresia = cmbClienteMembresia.SelectedItem.ToString()
+                };
+
+                clienteRepository.Insertar(nuevoCliente);
+
                 MessageBox.Show("Cliente agregado correctamente.");
-                CargarClientesEnGrid();  // Método para refrescar DataGridView
+                CargarClientesEnGrid();
                 LimpiarCamposCliente();
             }
             catch (Exception ex)
@@ -62,16 +89,15 @@ namespace Trabajo_final_herramientas_II.Forms
             {
                 Instructor nuevo = new Instructor
                 {
-                    UsuarioLogin = txtUsuario.Text,
                     UsuarioNombre = txtNombre.Text,
-                    Contraseña = txtPassword.Text,
                     Especialidad = txtEspecialidad.Text,
                     Disponible = chkDisponible.Checked
                 };
 
-                repo.Agregar(nuevo);
+                repoInstructor.Agregar(nuevo);
                 MessageBox.Show("Instructor agregado correctamente.");
                 CargarInstructores();
+                LimpiarCamposInstructor();
             }
             catch (Exception ex)
             {
@@ -81,6 +107,21 @@ namespace Trabajo_final_herramientas_II.Forms
 
         private void dgvInstru_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                instructorSeleccionado = (Instructor)dgvInstru.Rows[e.RowIndex].DataBoundItem;
+                txtNombre.Text = instructorSeleccionado.UsuarioNombre;
+                txtEspecialidad.Text = instructorSeleccionado.Especialidad;
+                chkDisponible.Checked = instructorSeleccionado.Disponible;
+            }
+        }
+
+        private void LimpiarCamposInstructor()
+        {
+            txtNombre.Text = "";
+            txtEspecialidad.Text = "";
+            chkDisponible.Checked = false;
+            instructorSeleccionado = null;
         }
         private void CargarClientesEnGrid()
         {
@@ -97,69 +138,77 @@ namespace Trabajo_final_herramientas_II.Forms
 
         private void CargarInstructores()
         {
-            var repo = new InstructorRepository();
-            var lista = repo.ObtenerTodos();
-
             dgvInstru.DataSource = null;
-            dgvInstru.DataSource = lista;
+            dgvInstru.DataSource = repoInstructor.ObtenerTodos();
+            dgvInstru.ClearSelection();
 
-            dgvInstru.Columns["UsuarioID"].Visible = false;
+            //dgvInstru.Columns["InstructorID"].Visible = false;
+            dgvInstru.Columns["UsuarioNombre"].HeaderText = "Nombre";
+            dgvInstru.Columns["Especialidad"].HeaderText = "Especialidad";
+            dgvInstru.Columns["Disponible"].HeaderText = "Disponible";
+
+            // Establecer el orden visual de las columnas
+            dgvInstru.Columns["InstructorID"].DisplayIndex = 0;
+            dgvInstru.Columns["UsuarioNombre"].DisplayIndex = 1;
+            dgvInstru.Columns["Especialidad"].DisplayIndex = 2;
+            dgvInstru.Columns["Disponible"].DisplayIndex = 3;
+
+
+            // Ocultar columnas heredadas que no uses
+            dgvInstru.Columns["UsuarioLogin"].Visible = false;
+            dgvInstru.Columns["Contraseña"].Visible = false;
+            dgvInstru.Columns["Rol"].Visible = false;
+            dgvInstru.Columns["Telefono"].Visible = false;
+            dgvInstru.Columns["Apellido"].Visible = false;
         }
 
         private void btneditInst_Click(object sender, EventArgs e)
         {
-            if (dgvInstru.CurrentRow == null)
+            if (dgvInstru.CurrentRow != null)
             {
-                MessageBox.Show("Selecciona un instructor para editar.");
-                return;
-            }
+                int id = Convert.ToInt32(dgvInstru.CurrentRow.Cells["InstructorID"].Value);
 
-            try
-            {
-                Instructor instructorEdit = (Instructor)dgvInstru.CurrentRow.DataBoundItem;
-                instructorEdit.UsuarioLogin = txtUsuario.Text;
-                instructorEdit.UsuarioNombre = txtNombre.Text;
-                instructorEdit.Contraseña = txtPassword.Text;
-                instructorEdit.Especialidad = txtEspecialidad.Text;
-                instructorEdit.Disponible = chkDisponible.Checked;
+                var instructor = new Instructor
+                {
+                    InstructorID = id,
+                    UsuarioNombre = txtNombre.Text,
+                    Especialidad = txtEspecialidad.Text,
+                    Disponible = chkDisponible.Checked
+                };
 
-                InstructorRepository Repo = new InstructorRepository();
-                Repo.Editar(instructorEdit);
+                repoInstructor.Editar(instructor);
                 MessageBox.Show("Instructor editado correctamente.");
-                CargarInstructores();
+
+                CargarInstructores(); // vuelve a cargar los datos actualizados en el DataGridView
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al editar instructor: " + ex.Message);
+                MessageBox.Show("Seleccione un instructor a editar.");
             }
         }
 
         private void btnDeleInst_Click(object sender, EventArgs e)
         {
-            if (dgvInstru.CurrentRow == null)
+            if (instructorSeleccionado == null)
             {
-                MessageBox.Show("Selecciona un instructor para eliminar.");
+                MessageBox.Show("Seleccione un instructor para eliminar.");
                 return;
             }
 
-            try
+            var confirm = MessageBox.Show("¿Está seguro de eliminar este instructor?", "Confirmar", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
             {
-                Instructor instructorEliminar = (Instructor)dgvInstru.CurrentRow.DataBoundItem;
-
-                // Confirmar eliminación
-                var confirmResult = MessageBox.Show("¿Seguro que deseas eliminar este instructor?",
-                                                    "Confirmar eliminación",
-                                                    MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
+                try
                 {
-                    repo.Eliminar(instructorEliminar.InstructorID, instructorEliminar.UsuarioID);
+                    repoInstructor.Eliminar(instructorSeleccionado.InstructorID);
                     MessageBox.Show("Instructor eliminado correctamente.");
                     CargarInstructores();
+                    LimpiarCamposInstructor();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al eliminar instructor: " + ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar instructor: " + ex.Message);
+                }
             }
         }
 
@@ -171,28 +220,20 @@ namespace Trabajo_final_herramientas_II.Forms
                 return;
             }
 
-            int clienteId = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
+            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
 
-            if (string.IsNullOrWhiteSpace(txtClienteUsuario.Text) ||
-                string.IsNullOrWhiteSpace(txtClienteNombre.Text) ||
-                string.IsNullOrWhiteSpace(txtClientePassword.Text))
+            Cliente clienteActualizado = new Cliente
             {
-                MessageBox.Show("Completa todos los campos obligatorios.");
-                return;
-            }
-
-            Cliente clienteEditado = new Cliente()
-            {
-                UsuarioID = clienteId,
-                UsuarioLogin = txtClienteUsuario.Text.Trim(),
+                UsuarioID = id,
                 UsuarioNombre = txtClienteNombre.Text.Trim(),
                 Contraseña = txtClientePassword.Text.Trim(),
-                Telefono = txtClienteTelefono.Text.Trim()
+                Telefono = txtClienteTelefono.Text.Trim(),
+                TipoMembresia = cmbClienteMembresia.SelectedItem.ToString()
             };
 
             try
             {
-                ClienteRepository.Actualizar(clienteEditado);
+                clienteRepository.Actualizar(clienteActualizado);
                 MessageBox.Show("Cliente actualizado correctamente.");
                 CargarClientesEnGrid();
                 LimpiarCamposCliente();
@@ -211,15 +252,17 @@ namespace Trabajo_final_herramientas_II.Forms
                 return;
             }
 
-            int clienteId = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
+            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
+            string usuarioLogin = dgvClientes.CurrentRow.Cells["UsuarioLogin"].Value.ToString();
 
-            DialogResult respuesta = MessageBox.Show("¿Seguro que quieres eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿Seguro que deseas eliminar este cliente?", "Confirmación", MessageBoxButtons.YesNo);
 
-            if (respuesta == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 try
                 {
-                    ClienteRepository.Eliminar(clienteId);
+                    clienteRepository.Eliminar(id);
+                    //usuarioRepository.Eliminar(usuarioLogin);
                     MessageBox.Show("Cliente eliminado correctamente.");
                     CargarClientesEnGrid();
                     LimpiarCamposCliente();
@@ -285,6 +328,7 @@ namespace Trabajo_final_herramientas_II.Forms
 
         private void FormAdminUses_Load(object sender, EventArgs e)
         {
+            CargarInstructores();
 
         }
     }

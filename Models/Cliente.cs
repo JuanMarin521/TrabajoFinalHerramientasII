@@ -8,6 +8,8 @@ namespace Trabajo_final_herramientas_II.Models
 {
     public class Cliente : Usuario
     {
+        public int ClienteID { get; set; }
+
         public string TipoMembresia { get; set; }
 
         public Cliente()
