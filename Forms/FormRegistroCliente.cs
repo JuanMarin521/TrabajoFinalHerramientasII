@@ -18,7 +18,7 @@ namespace Trabajo_final_herramientas_II.Forms
     public partial class FormRegistroCliente : Form
     {
         private readonly ClienteRepository _clienteRepository = new ClienteRepository();
-        private readonly string connectionString = "Data Source=DESKTOP-0KBBNKK;Initial Catalog=Herramientas;Integrated Security=True";
+        private readonly string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
         public FormRegistroCliente()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace Trabajo_final_herramientas_II.Forms
                 string telefono = txtTelefono.Text.Trim();
                 string contraseña = txtPassword.Text.Trim();
                 string tipoMembresia = cmbMembresia.SelectedItem?.ToString() ?? "Básico";
-                string rol = "Cliente"; // fijo para este formulario
+                string rol = "Cliente"; 
 
                 if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(nombreUsuario) ||
                     string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(contraseña))
@@ -54,7 +54,7 @@ namespace Trabajo_final_herramientas_II.Forms
                     con.Open();
 
                     // Verificar si el usuario ya existe
-                    string checkQuery = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @usuario";
+                    string checkQuery = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario";
                     using (SqlCommand checkCmd = new SqlCommand(checkQuery, con))
                     {
                         checkCmd.Parameters.AddWithValue("@usuario", usuario);
@@ -81,11 +81,9 @@ namespace Trabajo_final_herramientas_II.Forms
                         insertUsuarioCmd.Parameters.AddWithValue("@contraseña", contraseña);
                         insertUsuarioCmd.Parameters.AddWithValue("@rol", rol);
 
-                        // Ejecutar y obtener ID del usuario recién creado
                         usuarioId = Convert.ToInt32(insertUsuarioCmd.ExecuteScalar());
                     }
 
-                    // Insertar en Clientes con el mismo usuarioId (si quieres relacionar)
                     string insertClienteQuery = @"
                 INSERT INTO Clientes (Nombre, Apellido, Telefono, TipoMembresia)
                 VALUES (@nombreUsuario, @apellido, @telefono, @tipoMembresia);";
@@ -103,7 +101,6 @@ namespace Trabajo_final_herramientas_II.Forms
 
                 MessageBox.Show("Usuario y cliente registrados exitosamente.", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Limpiar campos
                 txtUser.Clear();
                 txtNombre.Clear();
                 txtApellido.Clear();

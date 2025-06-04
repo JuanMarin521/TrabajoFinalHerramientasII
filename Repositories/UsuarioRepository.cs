@@ -8,13 +8,13 @@ namespace Trabajo_final_herramientas_II.Repositories
 {
     public class UsuarioRepository
     {
-        private string connectionString = "Data Source=DESKTOP-0KBBNKK;Initial Catalog=Herramientas;Integrated Security=True";
+        private string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
 
         public Usuario ValidarCredenciales(string usuario, string contraseña)
         {
             Usuario resultado = null;
 
-            string query = "SELECT UsuarioID, Usuario, Rol FROM Usuarios WHERE Usuario = @usuario AND Contraseña = @contraseña";
+            string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -49,7 +49,7 @@ namespace Trabajo_final_herramientas_II.Repositories
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
                 cmd.Parameters.AddWithValue("@usuario", nombreUsuario); 
-                cmd.Parameters.AddWithValue("@nombreUsuario", nombreUsuario); 
+                cmd.Parameters.AddWithValue("@NombreUsuario", nombreUsuario); 
                 cmd.Parameters.AddWithValue("@contraseña", contraseña);
                 cmd.Parameters.AddWithValue("@rol", rol); 
 
@@ -61,7 +61,7 @@ namespace Trabajo_final_herramientas_II.Repositories
 
         public Cliente ObtenerPorUsuarioNombre(string usuarioNombre)
         {
-            using (var connection = new SqlConnection("Data Source=DESKTOP-0KBBNKK;Initial Catalog=Herramientas;Integrated Security=True"))
+            using (var connection = new SqlConnection("Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True"))
             {
                 string query = "SELECT * FROM Clientes WHERE Nombre = @nombreUsuario";
                 SqlCommand command = new SqlCommand(query, connection);

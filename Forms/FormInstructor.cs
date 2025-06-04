@@ -21,5 +21,10 @@ namespace Trabajo_final_herramientas_II.Forms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

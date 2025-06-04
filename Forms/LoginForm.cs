@@ -35,7 +35,6 @@ namespace Trabajo_final_herramientas_II.Forms
 
                     this.Hide();
 
-                    // Abrir el formulario correspondiente según el rol
                     switch (usuario.Rol)
                     {
                         case "Administrador":

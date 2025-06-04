@@ -164,7 +164,7 @@ namespace Trabajo_final_herramientas_II.Repositories
 
         public Cliente ObtenerPorUsuarioID(int usuarioID)
         {
-            using (var connection = new SqlConnection("Data Source=DESKTOP-0KBBNKK;Initial Catalog=Herramientas;Integrated Security=True"))
+            using (var connection = new SqlConnection("Data Source=LAPTOP-5OE3AFLL;Initial Catalog=Herramientas;Integrated Security=True"))
             {
                 string query = "SELECT * FROM Clientes WHERE UsuarioID = @usuarioID";
                 SqlCommand command = new SqlCommand(query, connection);
