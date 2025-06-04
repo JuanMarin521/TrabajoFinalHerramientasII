@@ -19,10 +19,9 @@ namespace Trabajo_final_herramientas_II.Forms
         private Cliente cliente;
         private ClaseRepository claseRepo;
         private ClasesInscritasRepository inscritaRepo;
-        public FormUsuario(Cliente cliente)
+        public FormUsuario()
         {
             InitializeComponent();
-            this.cliente = cliente;
             claseRepo = new ClaseRepository();
             inscritaRepo = new ClasesInscritasRepository();
         }

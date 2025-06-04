@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
 using Trabajo_final_herramientas_II.Models;
-//using Trabajo_final_herramientas_II.Factory;
 using Trabajo_final_herramientas_II.Factories;
 
 namespace Trabajo_final_herramientas_II.Repositories
@@ -10,11 +9,14 @@ namespace Trabajo_final_herramientas_II.Repositories
     {
         private string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
 
+        // Valida usuario y contraseña y devuelve un objeto Usuario con el rol correspondiente
         public Usuario ValidarCredenciales(string usuario, string contraseña)
         {
             Usuario resultado = null;
 
-            string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario";
+            string query = @"SELECT UsuarioID, Usuario, NombreUsuario, Contraseña, Rol 
+                     FROM Usuarios 
+                     WHERE Usuario = @usuario AND Contraseña = @contraseña";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -31,8 +33,8 @@ namespace Trabajo_final_herramientas_II.Repositories
                         string rol = reader["Rol"].ToString();
 
                         resultado = UsuarioFactory.CrearUsuario(rol);
-                        resultado.UsuarioID = (int)reader["UsuarioID"];
-                        resultado.UsuarioNombre = reader["Usuario"].ToString();
+                        resultado.UsuarioID = Convert.ToInt32(reader["UsuarioID"]);
+                        resultado.UsuarioNombre = reader["Usuario"].ToString(); // aquí pones el usuario (ejemplo jpmarine)
                         resultado.Rol = rol;
                     }
                 }
@@ -41,17 +43,22 @@ namespace Trabajo_final_herramientas_II.Repositories
             return resultado;
         }
 
-        public bool RegistrarUsuario(string nombreUsuario, string contraseña, string rol)
+
+        // Registra un nuevo usuario en la base de datos
+        public bool RegistrarUsuario(string usuario, string nombreCompleto, string contraseña, string rol)
         {
-            string query = "INSERT INTO Usuarios (Usuario, NombreUsuario, Contraseña, Rol) VALUES (@usuario, @nombreUsuario, @contraseña, @rol)";
+            string query = @"INSERT INTO Usuarios (Usuario, NombreUsuario, Contraseña, Rol) 
+                             VALUES (@usuario, @nombreUsuario, @contraseña, @rol)";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
             {
-                cmd.Parameters.AddWithValue("@usuario", nombreUsuario); 
-                cmd.Parameters.AddWithValue("@NombreUsuario", nombreUsuario); 
+                // Usuario: nombre corto de usuario
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                // NombreUsuario: nombre completo o display name
+                cmd.Parameters.AddWithValue("@nombreUsuario", nombreCompleto);
                 cmd.Parameters.AddWithValue("@contraseña", contraseña);
-                cmd.Parameters.AddWithValue("@rol", rol); 
+                cmd.Parameters.AddWithValue("@rol", rol);
 
                 con.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -59,27 +66,31 @@ namespace Trabajo_final_herramientas_II.Repositories
             }
         }
 
+        // Obtiene el cliente relacionado al nombre de usuario (NombreUsuario)
         public Cliente ObtenerPorUsuarioNombre(string usuarioNombre)
         {
-            using (var connection = new SqlConnection("Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True"))
+            using (var connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM Clientes WHERE Nombre = @nombreUsuario";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@nombreUsuario", usuarioNombre);
-
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    return new Cliente
+                    command.Parameters.AddWithValue("@nombreUsuario", usuarioNombre);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        UsuarioID = (int)reader["ClienteID"],
-                        UsuarioNombre = reader["Nombre"].ToString(),
-                        Apellido = reader["Apellido"].ToString(),
-                        Telefono = reader["Telefono"].ToString(),
-                        TipoMembresia = reader["TipoMembresia"].ToString()
-                    };
+                        if (reader.Read())
+                        {
+                            return new Cliente
+                            {
+                                UsuarioID = Convert.ToInt32(reader["ClienteID"]),
+                                UsuarioNombre = reader["Nombre"].ToString(),
+                                Apellido = reader["Apellido"].ToString(),
+                                Telefono = reader["Telefono"].ToString(),
+                                TipoMembresia = reader["TipoMembresia"].ToString()
+                            };
+                        }
+                    }
                 }
             }
 

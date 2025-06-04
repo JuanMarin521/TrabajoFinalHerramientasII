@@ -25,7 +25,7 @@ namespace Trabajo_final_herramientas_II.Forms
 
         private void llbUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormUsuario formUsuario = new FormUsuario(null); // Aquí deberías pasar un cliente válido
+            FormUsuario formUsuario = new FormUsuario(); // Aquí deberías pasar un cliente válido
             formUsuario.ShowDialog();
         }
 
@@ -33,6 +33,12 @@ namespace Trabajo_final_herramientas_II.Forms
         {
             FormInstructor formInstructor = new FormInstructor();
             formInstructor.ShowDialog();
+        }
+
+        private void llbAdmin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormAdminUses formAdminUses = new FormAdminUses();
+            formAdminUses.ShowDialog();
         }
     }
 }

@@ -46,21 +46,12 @@ namespace Trabajo_final_herramientas_II.Forms
                             formInstructor.Show();
                             break;
                         case "Cliente":
-                            FormUsuario formUsuario1 = new FormUsuario(null);
+                            FormUsuario formUsuario1 = new FormUsuario();
                             formUsuario1.Show();
                             ClienteRepository clienteRepo = new ClienteRepository();
-                            Cliente cliente = clienteRepo.ObtenerPorUsuarioID(usuario.UsuarioID);
+                            Cliente cliente = clienteRepo.ObtenerPorClienteID(usuario.UsuarioID);
 
-                            if (cliente != null)
-                            {
-                                FormUsuario formUsuario = new FormUsuario(cliente);
-                                formUsuario.Show();
-                            }
-                            else
-                            {
-                                MessageBox.Show("No se encontró al cliente en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                this.Show();
-                            }
+
                             break;
                         default:
                             MessageBox.Show("Rol no reconocido.");

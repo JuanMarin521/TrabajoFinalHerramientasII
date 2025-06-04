@@ -40,9 +40,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Trabajo_final_herramientas_II.Properties.Resources._6_430_000__Structure_Pictures;
-            this.pictureBox1.Location = new System.Drawing.Point(-12, -41);
+            this.pictureBox1.Location = new System.Drawing.Point(-9, -33);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 555);
+            this.pictureBox1.Size = new System.Drawing.Size(204, 451);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -52,10 +53,9 @@
             this.lblBienvenida.AutoSize = true;
             this.lblBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenida.ForeColor = System.Drawing.Color.White;
-            this.lblBienvenida.Location = new System.Drawing.Point(303, 39);
-            this.lblBienvenida.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBienvenida.Location = new System.Drawing.Point(227, 32);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(157, 32);
+            this.lblBienvenida.Size = new System.Drawing.Size(120, 26);
             this.lblBienvenida.TabIndex = 2;
             this.lblBienvenida.Text = "Bienvenido";
             // 
@@ -63,9 +63,10 @@
             // 
             this.llbRegistro.AutoSize = true;
             this.llbRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbRegistro.Location = new System.Drawing.Point(36, 94);
+            this.llbRegistro.Location = new System.Drawing.Point(27, 76);
+            this.llbRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbRegistro.Name = "llbRegistro";
-            this.llbRegistro.Size = new System.Drawing.Size(128, 32);
+            this.llbRegistro.Size = new System.Drawing.Size(101, 26);
             this.llbRegistro.TabIndex = 3;
             this.llbRegistro.TabStop = true;
             this.llbRegistro.Text = "Registro";
@@ -75,9 +76,10 @@
             // 
             this.llbUsuario.AutoSize = true;
             this.llbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbUsuario.Location = new System.Drawing.Point(36, 149);
+            this.llbUsuario.Location = new System.Drawing.Point(27, 121);
+            this.llbUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbUsuario.Name = "llbUsuario";
-            this.llbUsuario.Size = new System.Drawing.Size(119, 32);
+            this.llbUsuario.Size = new System.Drawing.Size(94, 26);
             this.llbUsuario.TabIndex = 4;
             this.llbUsuario.TabStop = true;
             this.llbUsuario.Text = "Usuario";
@@ -87,9 +89,10 @@
             // 
             this.llbInstructor.AutoSize = true;
             this.llbInstructor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbInstructor.Location = new System.Drawing.Point(36, 204);
+            this.llbInstructor.Location = new System.Drawing.Point(27, 166);
+            this.llbInstructor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbInstructor.Name = "llbInstructor";
-            this.llbInstructor.Size = new System.Drawing.Size(141, 32);
+            this.llbInstructor.Size = new System.Drawing.Size(112, 26);
             this.llbInstructor.TabIndex = 5;
             this.llbInstructor.TabStop = true;
             this.llbInstructor.Text = "Instructor";
@@ -99,25 +102,28 @@
             // 
             this.llbAdmin.AutoSize = true;
             this.llbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llbAdmin.Location = new System.Drawing.Point(36, 271);
+            this.llbAdmin.Location = new System.Drawing.Point(27, 220);
+            this.llbAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbAdmin.Name = "llbAdmin";
-            this.llbAdmin.Size = new System.Drawing.Size(100, 32);
+            this.llbAdmin.Size = new System.Drawing.Size(80, 26);
             this.llbAdmin.TabIndex = 6;
             this.llbAdmin.TabStop = true;
             this.llbAdmin.Text = "Admin";
+            this.llbAdmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbAdmin_LinkClicked);
             // 
             // FormAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(969, 495);
+            this.ClientSize = new System.Drawing.Size(727, 402);
             this.Controls.Add(this.llbAdmin);
             this.Controls.Add(this.llbInstructor);
             this.Controls.Add(this.llbUsuario);
             this.Controls.Add(this.llbRegistro);
             this.Controls.Add(this.lblBienvenida);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAdministrador";
             this.Text = "FormAdministrador";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -162,13 +162,13 @@ namespace Trabajo_final_herramientas_II.Repositories
             return null;
         }
 
-        public Cliente ObtenerPorUsuarioID(int usuarioID)
+        public Cliente ObtenerPorClienteID(int clienteID)
         {
-            using (var connection = new SqlConnection("Data Source=LAPTOP-5OE3AFLL;Initial Catalog=Herramientas;Integrated Security=True"))
+            using (var connection = new SqlConnection("Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True"))
             {
-                string query = "SELECT * FROM Clientes WHERE UsuarioID = @usuarioID";
+                string query = "SELECT * FROM Clientes WHERE ClienteID = @clienteID";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@usuarioID", usuarioID);
+                command.Parameters.AddWithValue("@clienteID", clienteID);
 
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -177,6 +177,7 @@ namespace Trabajo_final_herramientas_II.Repositories
                 {
                     return new Cliente
                     {
+                        UsuarioID = clienteID,
                         UsuarioNombre = reader["Nombre"].ToString(),
                         Apellido = reader["Apellido"].ToString(),
                         Telefono = reader["Telefono"].ToString(),
@@ -189,5 +190,5 @@ namespace Trabajo_final_herramientas_II.Repositories
         }
 
     }
-   
+
 }
