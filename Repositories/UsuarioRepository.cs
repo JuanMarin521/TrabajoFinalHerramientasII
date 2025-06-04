@@ -7,7 +7,9 @@ namespace Trabajo_final_herramientas_II.Repositories
 {
     public class UsuarioRepository
     {
-        private string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+       // private string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+         private string connectionString = "Data Source=SEBASTIAN;Initial Catalog=Herramientas;Integrated Security=True";
+
 
         // Valida usuario y contraseña y devuelve un objeto Usuario con el rol correspondiente
         public Usuario ValidarCredenciales(string usuario, string contraseña)
@@ -65,6 +67,8 @@ namespace Trabajo_final_herramientas_II.Repositories
                 return rowsAffected > 0;
             }
         }
+
+     
 
         // Obtiene el cliente relacionado al nombre de usuario (NombreUsuario)
         public Cliente ObtenerPorUsuarioNombre(string usuarioNombre)

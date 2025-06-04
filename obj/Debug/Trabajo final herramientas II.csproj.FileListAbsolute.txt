@@ -58,3 +58,18 @@ C:\Users\Pablo\source\repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final h
 C:\Users\Pablo\source\repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.csproj.CoreCompileInputs.cache
 C:\Users\Pablo\source\repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.exe
 C:\Users\Pablo\source\repos\TrabajoFinalHerramientasII\obj\Debug\Trabajo final herramientas II.pdb
+C:\Users\User\Desktop\proyectv2\bin\Debug\Trabajo final herramientas II.exe.config
+C:\Users\User\Desktop\proyectv2\bin\Debug\Trabajo final herramientas II.exe
+C:\Users\User\Desktop\proyectv2\bin\Debug\Trabajo final herramientas II.pdb
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo final herramientas II.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Forms.FormAdministrador.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Forms.FormAdminUses.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Forms.FormInstructor.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Forms.FormRegistroCliente.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Forms.FormUsuario.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Forms.LoginForm.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo_final_herramientas_II.Properties.Resources.resources
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo final herramientas II.csproj.GenerateResource.cache
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo final herramientas II.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo final herramientas II.exe
+C:\Users\User\Desktop\proyectv2\obj\Debug\Trabajo final herramientas II.pdb

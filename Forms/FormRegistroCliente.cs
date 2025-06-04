@@ -19,7 +19,9 @@ namespace Trabajo_final_herramientas_II.Forms
     {
         private readonly ClienteRepository ClienteRepository = new ClienteRepository();
 
-        private readonly string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+         // private readonly string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+        private readonly string connectionString = "Data Source=SEBASTIAN;Initial Catalog=Herramientas;Integrated Security=True";
+
         public FormRegistroCliente()
         {
             InitializeComponent();
@@ -77,7 +79,9 @@ namespace Trabajo_final_herramientas_II.Forms
                     return;
                 }
 
-                string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+                // string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+                string connectionString = "Data Source=SEBASTIAN;Initial Catalog=Herramientas;Integrated Security=True";
+
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {

@@ -56,7 +56,7 @@ namespace Trabajo_final_herramientas_II.Repositories
                 cmd.Parameters.AddWithValue("@Apellido", cliente.Apellido);
                 cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                 cmd.Parameters.AddWithValue("@TipoMembresia", cliente.TipoMembresia);
-
+               
                 if (connection.State != ConnectionState.Open)
                     connection.Open();
 

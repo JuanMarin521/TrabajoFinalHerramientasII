@@ -20,26 +20,93 @@ namespace Trabajo_final_herramientas_II.Forms
 
         private UsuarioRepository usuarioRepository = new UsuarioRepository();
         private ClienteRepository clienteRepository = new ClienteRepository();
+        private Cliente clienteSeleccionado = null;
+
 
         //Variables de instructores
         private InstructorRepository repoInstructor = new InstructorRepository();
         private Instructor instructorSeleccionado = null;
 
+        private Clase claseSeleccionada = null;
+
         public FormAdminUses()
         {
             InitializeComponent();
-            CargarInstructores();
+            this.dgvInstru.SelectionChanged += dgvInstru_SelectionChanged;
+            this.dgvClientes.SelectionChanged += dgvClientes_SelectionChanged;
+            this.dgvClases.SelectionChanged += dgvClases_SelectionChanged;
+            this.nmupCupo.ValueChanged += nmupCupo_ValueChanged;
 
+           
+            ConfigurarNumericUpDown();
+
+            CargarInstructores();
+            CargarClientesEnGrid();
+            CargarClasesEnGrid();
+        }
+        private void ConfigurarNumericUpDown()
+        {
+            // Configurar el rango del NumericUpDown
+            nmupCupo.Minimum = 0;  // Permitir 0 para clases llenas
+            nmupCupo.Maximum = 100; // Ajustar según tus necesidades
+            nmupCupo.Value = 1;     // Valor por defecto
+            nmupCupo.Increment = 1; // Incremento de 1 en 1
+        }
+        private void dgvClases_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvClases.CurrentRow != null && dgvClases.CurrentRow.Index >= 0)
+            {
+                try
+                {
+                    claseSeleccionada = (Clase)dgvClases.CurrentRow.DataBoundItem;
+                    if (claseSeleccionada != null)
+                    {
+                        txtNombreClase.Text = claseSeleccionada.Nombre ?? "";
+                        txtSala.Text = claseSeleccionada.Sala ?? "";
+
+                        // CAMBIAR: Usar nmupCupo en lugar de txtCupo
+                        nmupCupo.Value = claseSeleccionada.CupoDisponible;
+
+                        dtpHorario.Value = claseSeleccionada.Horario;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejar errores silenciosamente
+                    claseSeleccionada = null;
+                }
+            }
+        }
+        private void dgvInstru_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvInstru.CurrentRow != null && dgvInstru.CurrentRow.Index >= 0)
+            {
+                try
+                {
+                    instructorSeleccionado = (Instructor)dgvInstru.CurrentRow.DataBoundItem;
+                    if (instructorSeleccionado != null)
+                    {
+                        txtNombre.Text = instructorSeleccionado.UsuarioNombre ?? "";
+                        txtEspecialidad.Text = instructorSeleccionado.Especialidad ?? "";
+                        chkDisponible.Checked = instructorSeleccionado.Disponible;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejar errores silenciosamente para evitar interrupciones
+                    instructorSeleccionado = null;
+                }
+            }
         }
 
         private void BtnAddClient_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtClienteUsuario.Text) ||
-            string.IsNullOrWhiteSpace(txtClienteNombre.Text) ||
-            string.IsNullOrWhiteSpace(txtClienteApellido.Text) ||
-            string.IsNullOrWhiteSpace(txtClientePassword.Text) ||
-            string.IsNullOrWhiteSpace(txtClienteTelefono.Text) ||
-            cmbClienteMembresia.SelectedItem == null)
+       string.IsNullOrWhiteSpace(txtClienteNombre.Text) ||
+       string.IsNullOrWhiteSpace(txtClienteApellido.Text) ||
+       string.IsNullOrWhiteSpace(txtClientePassword.Text) ||
+       string.IsNullOrWhiteSpace(txtClienteTelefono.Text) ||
+       cmbClienteMembresia.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, completa todos los campos obligatorios.");
                 return;
@@ -61,11 +128,12 @@ namespace Trabajo_final_herramientas_II.Forms
                     return;
                 }
 
-                // Paso 2: Insertar en la tabla Clientes (usando solo lo necesario)
+              
                 Cliente nuevoCliente = new Cliente
                 {
                     UsuarioLogin = txtClienteUsuario.Text.Trim(),
-                    UsuarioNombre = txtClienteNombre.Text.Trim() + " " + txtClienteApellido.Text.Trim(),
+                    UsuarioNombre = txtClienteNombre.Text.Trim(),
+                    Apellido = txtClienteApellido.Text.Trim(),
                     Contraseña = txtClientePassword.Text.Trim(),
                     Telefono = txtClienteTelefono.Text.Trim(),
                     TipoMembresia = cmbClienteMembresia.SelectedItem.ToString()
@@ -125,15 +193,104 @@ namespace Trabajo_final_herramientas_II.Forms
         }
         private void CargarClientesEnGrid()
         {
-            dgvClientes.DataSource = ClienteRepository.ObtenerTodos();
+            try
+            {
+                dgvClientes.DataSource = null;
+                dgvClientes.DataSource = ClienteRepository.ObtenerTodos();
+                dgvClientes.ClearSelection();
+
+                // Configurar las columnas si existen
+                if (dgvClientes.Columns.Count > 0)
+                {
+                    // MOSTRAR TODAS LAS COLUMNAS IMPORTANTES (incluyendo Usuario y Contraseña)
+
+                    // Configurar headers más amigables y hacer visibles las columnas necesarias
+                    if (dgvClientes.Columns.Contains("UsuarioID"))
+                    {
+                        dgvClientes.Columns["UsuarioID"].HeaderText = "ID";
+                        dgvClientes.Columns["UsuarioID"].DisplayIndex = 0;
+                    }
+
+                    if (dgvClientes.Columns.Contains("UsuarioLogin"))
+                    {
+                        dgvClientes.Columns["UsuarioLogin"].HeaderText = "Usuario";
+                        dgvClientes.Columns["UsuarioLogin"].Visible = true; // ASEGURAR QUE SEA VISIBLE
+                        dgvClientes.Columns["UsuarioLogin"].DisplayIndex = 1;
+                    }
+
+                    if (dgvClientes.Columns.Contains("UsuarioNombre"))
+                    {
+                        dgvClientes.Columns["UsuarioNombre"].HeaderText = "Nombre";
+                        dgvClientes.Columns["UsuarioNombre"].DisplayIndex = 2;
+                    }
+
+                    if (dgvClientes.Columns.Contains("Apellido"))
+                    {
+                        dgvClientes.Columns["Apellido"].HeaderText = "Apellido";
+                        dgvClientes.Columns["Apellido"].DisplayIndex = 3;
+                    }
+
+                    // MOSTRAR LA CONTRASEÑA (en lugar de ocultarla)
+                    if (dgvClientes.Columns.Contains("Contraseña"))
+                    {
+                        dgvClientes.Columns["Contraseña"].HeaderText = "Contraseña";
+                        dgvClientes.Columns["Contraseña"].Visible = true; // HACER VISIBLE
+                        dgvClientes.Columns["Contraseña"].DisplayIndex = 4;
+                    }
+
+                    if (dgvClientes.Columns.Contains("Telefono"))
+                    {
+                        dgvClientes.Columns["Telefono"].HeaderText = "Teléfono";
+                        dgvClientes.Columns["Telefono"].DisplayIndex = 5;
+                    }
+
+                    if (dgvClientes.Columns.Contains("TipoMembresia"))
+                    {
+                        dgvClientes.Columns["TipoMembresia"].HeaderText = "Membresía";
+                        dgvClientes.Columns["TipoMembresia"].DisplayIndex = 6;
+                    }
+
+                    // Ocultar solo la columna Rol que no es necesaria para clientes
+                    if (dgvClientes.Columns.Contains("Rol"))
+                        dgvClientes.Columns["Rol"].Visible = false;
+
+                    // Ajustar el ancho de las columnas para mejor visualización
+                    if (dgvClientes.Columns.Contains("UsuarioID"))
+                        dgvClientes.Columns["UsuarioID"].Width = 50;
+
+                    if (dgvClientes.Columns.Contains("UsuarioLogin"))
+                        dgvClientes.Columns["UsuarioLogin"].Width = 100;
+
+                    if (dgvClientes.Columns.Contains("UsuarioNombre"))
+                        dgvClientes.Columns["UsuarioNombre"].Width = 120;
+
+                    if (dgvClientes.Columns.Contains("Apellido"))
+                        dgvClientes.Columns["Apellido"].Width = 120;
+
+                    if (dgvClientes.Columns.Contains("Contraseña"))
+                        dgvClientes.Columns["Contraseña"].Width = 100;
+
+                    if (dgvClientes.Columns.Contains("Telefono"))
+                        dgvClientes.Columns["Telefono"].Width = 100;
+
+                    if (dgvClientes.Columns.Contains("TipoMembresia"))
+                        dgvClientes.Columns["TipoMembresia"].Width = 100;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar clientes: " + ex.Message);
+            }
         }
 
         private void LimpiarCamposCliente()
         {
             txtClienteUsuario.Clear();
             txtClienteNombre.Clear();
+            txtClienteApellido.Clear(); // Agregar esta línea
             txtClientePassword.Clear();
             txtClienteTelefono.Clear();
+            cmbClienteMembresia.SelectedIndex = -1; // Limpiar la selección del combobox
         }
 
         private void CargarInstructores()
@@ -220,12 +377,31 @@ namespace Trabajo_final_herramientas_II.Forms
                 return;
             }
 
-            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
+            // CORREGIDO: Verificar que los campos obligatorios estén llenos
+            if (string.IsNullOrWhiteSpace(txtClienteUsuario.Text) ||
+                string.IsNullOrWhiteSpace(txtClienteNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtClienteApellido.Text) ||
+                string.IsNullOrWhiteSpace(txtClientePassword.Text) ||
+                string.IsNullOrWhiteSpace(txtClienteTelefono.Text) ||
+                cmbClienteMembresia.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, completa todos los campos obligatorios.");
+                return;
+            }
+
+            // CORREGIDO: Usar el objeto seleccionado en lugar de buscar la columna
+            if (clienteSeleccionado == null)
+            {
+                MessageBox.Show("Selecciona un cliente de la lista primero.");
+                return;
+            }
 
             Cliente clienteActualizado = new Cliente
             {
-                UsuarioID = id,
+                UsuarioID = clienteSeleccionado.UsuarioID,
+                UsuarioLogin = txtClienteUsuario.Text.Trim(),
                 UsuarioNombre = txtClienteNombre.Text.Trim(),
+                Apellido = txtClienteApellido.Text.Trim(),
                 Contraseña = txtClientePassword.Text.Trim(),
                 Telefono = txtClienteTelefono.Text.Trim(),
                 TipoMembresia = cmbClienteMembresia.SelectedItem.ToString()
@@ -237,6 +413,7 @@ namespace Trabajo_final_herramientas_II.Forms
                 MessageBox.Show("Cliente actualizado correctamente.");
                 CargarClientesEnGrid();
                 LimpiarCamposCliente();
+                clienteSeleccionado = null; // Limpiar la selección
             }
             catch (Exception ex)
             {
@@ -246,14 +423,11 @@ namespace Trabajo_final_herramientas_II.Forms
 
         private void btnDeleClient_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.CurrentRow == null)
+            if (clienteSeleccionado == null)
             {
                 MessageBox.Show("Selecciona un cliente para eliminar.");
                 return;
             }
-
-            int id = Convert.ToInt32(dgvClientes.CurrentRow.Cells["IdCliente"].Value);
-            string usuarioLogin = dgvClientes.CurrentRow.Cells["UsuarioLogin"].Value.ToString();
 
             DialogResult result = MessageBox.Show("¿Seguro que deseas eliminar este cliente?", "Confirmación", MessageBoxButtons.YesNo);
 
@@ -261,11 +435,11 @@ namespace Trabajo_final_herramientas_II.Forms
             {
                 try
                 {
-                    clienteRepository.Eliminar(id);
-                    //usuarioRepository.Eliminar(usuarioLogin);
+                    clienteRepository.Eliminar(clienteSeleccionado.UsuarioID);
                     MessageBox.Show("Cliente eliminado correctamente.");
                     CargarClientesEnGrid();
                     LimpiarCamposCliente();
+                    clienteSeleccionado = null; // Limpiar la selección
                 }
                 catch (Exception ex)
                 {
@@ -276,46 +450,107 @@ namespace Trabajo_final_herramientas_II.Forms
         private void LimpiarCamposClase()
         {
             txtNombreClase.Clear();
-            txtCupo.Clear();
             txtSala.Clear();
             dtpHorario.Value = DateTime.Now;
+
+            // CAMBIAR: Limpiar nmupCupo en lugar de txtCupo
+            nmupCupo.Value = nmupCupo.Minimum; // O el valor que prefieras como default
         }
 
         private void CargarClasesEnGrid()
         {
-            var clases = ClaseRepository.ObtenerDisponibles(); // Debes implementar este método si no lo tienes
-            dgvClases.DataSource = null;
-            dgvClases.DataSource = clases;
+            try
+            {
+                dgvClases.DataSource = null;
+                dgvClases.DataSource = ClaseRepository.ObtenerTodas(); // Cambiar para obtener todas las clases
+                dgvClases.ClearSelection();
+
+                // Configurar las columnas si existen
+                if (dgvClases.Columns.Count > 0)
+                {
+                    // Configurar headers más amigables
+                    if (dgvClases.Columns.Contains("ClaseID"))
+                    {
+                        dgvClases.Columns["ClaseID"].HeaderText = "ID";
+                        dgvClases.Columns["ClaseID"].Width = 50;
+                        dgvClases.Columns["ClaseID"].DisplayIndex = 0;
+                    }
+
+                    if (dgvClases.Columns.Contains("Nombre"))
+                    {
+                        dgvClases.Columns["Nombre"].HeaderText = "Nombre de Clase";
+                        dgvClases.Columns["Nombre"].Width = 150;
+                        dgvClases.Columns["Nombre"].DisplayIndex = 1;
+                    }
+
+                    if (dgvClases.Columns.Contains("Horario"))
+                    {
+                        dgvClases.Columns["Horario"].HeaderText = "Horario";
+                        dgvClases.Columns["Horario"].Width = 120;
+                        dgvClases.Columns["Horario"].DisplayIndex = 2;
+                        // Formatear la fecha/hora
+                        dgvClases.Columns["Horario"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                    }
+
+                    if (dgvClases.Columns.Contains("CupoDisponible"))
+                    {
+                        dgvClases.Columns["CupoDisponible"].HeaderText = "Cupo";
+                        dgvClases.Columns["CupoDisponible"].Width = 80;
+                        dgvClases.Columns["CupoDisponible"].DisplayIndex = 3;
+                    }
+
+                    if (dgvClases.Columns.Contains("Sala"))
+                    {
+                        dgvClases.Columns["Sala"].HeaderText = "Sala";
+                        dgvClases.Columns["Sala"].Width = 100;
+                        dgvClases.Columns["Sala"].DisplayIndex = 4;
+                    }
+
+                    // Ocultar otras columnas que no sean necesarias
+                    foreach (DataGridViewColumn column in dgvClases.Columns)
+                    {
+                        if (!new[] { "ClaseID", "Nombre", "Horario", "CupoDisponible", "Sala" }.Contains(column.Name))
+                        {
+                            column.Visible = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar clases: " + ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombreClase.Text) ||
-       string.IsNullOrWhiteSpace(txtCupo.Text) ||
-       string.IsNullOrWhiteSpace(txtSala.Text))
+         string.IsNullOrWhiteSpace(txtSala.Text))
             {
-                MessageBox.Show("Por favor, completa todos los campos.");
+                MessageBox.Show("Por favor, completa todos los campos obligatorios.");
                 return;
             }
 
-            int cupoDisponible;
-            if (!int.TryParse(txtCupo.Text, out cupoDisponible) || cupoDisponible < 1)
+            // CAMBIAR: Usar nmupCupo.Value directamente
+            int cupoDisponible = (int)nmupCupo.Value;
+
+            if (cupoDisponible < 1)
             {
-                MessageBox.Show("El cupo debe ser un número válido mayor a cero.");
+                MessageBox.Show("El cupo debe ser mayor a cero.");
                 return;
             }
-
-            Clase nuevaClase = new Clase
-            {
-                Nombre = txtNombreClase.Text.Trim(),
-                Horario = dtpHorario.Value,
-                CupoDisponible = cupoDisponible,
-                Sala = txtSala.Text.Trim()
-            };
 
             try
             {
-                ClaseRepository.AgregarClase(nuevaClase); 
+                Clase nuevaClase = new Clase
+                {
+                    Nombre = txtNombreClase.Text.Trim(),
+                    Horario = dtpHorario.Value,
+                    CupoDisponible = cupoDisponible,
+                    Sala = txtSala.Text.Trim()
+                };
+
+                ClaseRepository.AgregarClase(nuevaClase);
                 MessageBox.Show("Clase agregada exitosamente.");
                 LimpiarCamposClase();
                 CargarClasesEnGrid();
@@ -329,7 +564,219 @@ namespace Trabajo_final_herramientas_II.Forms
         private void FormAdminUses_Load(object sender, EventArgs e)
         {
             CargarInstructores();
+            CargarClientesEnGrid();
+            CargarClasesEnGrid();
+        }
 
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                clienteSeleccionado = (Cliente)dgvClientes.Rows[e.RowIndex].DataBoundItem;
+                txtClienteUsuario.Text = clienteSeleccionado.UsuarioLogin ?? "";
+
+                // CORREGIDO: Manejar mejor la separación del nombre
+                txtClienteNombre.Text = clienteSeleccionado.UsuarioNombre ?? "";
+
+                // CORREGIDO: Usar la propiedad Apellido directamente
+                txtClienteApellido.Text = clienteSeleccionado.Apellido ?? "";
+                txtClientePassword.Text = clienteSeleccionado.Contraseña ?? "";
+                txtClienteTelefono.Text = clienteSeleccionado.Telefono ?? "";
+
+                // CORREGIDO: Manejar la selección del combobox de manera segura
+                if (!string.IsNullOrEmpty(clienteSeleccionado.TipoMembresia))
+                {
+                    int index = cmbClienteMembresia.FindStringExact(clienteSeleccionado.TipoMembresia);
+                    if (index >= 0)
+                        cmbClienteMembresia.SelectedIndex = index;
+                    else
+                        cmbClienteMembresia.SelectedIndex = -1;
+                }
+                else
+                {
+                    cmbClienteMembresia.SelectedIndex = -1;
+                }
+            }
+        }
+
+        private void dgvClientes_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow != null && dgvClientes.CurrentRow.Index >= 0)
+            {
+                try
+                {
+                    clienteSeleccionado = (Cliente)dgvClientes.CurrentRow.DataBoundItem;
+                    if (clienteSeleccionado != null)
+                    {
+                        txtClienteUsuario.Text = clienteSeleccionado.UsuarioLogin ?? "";
+                        txtClienteNombre.Text = clienteSeleccionado.UsuarioNombre ?? "";
+                        txtClienteApellido.Text = clienteSeleccionado.Apellido ?? "";
+                        txtClientePassword.Text = clienteSeleccionado.Contraseña ?? "";
+                        txtClienteTelefono.Text = clienteSeleccionado.Telefono ?? "";
+
+                        if (!string.IsNullOrEmpty(clienteSeleccionado.TipoMembresia))
+                        {
+                            int index = cmbClienteMembresia.FindStringExact(clienteSeleccionado.TipoMembresia);
+                            if (index >= 0)
+                                cmbClienteMembresia.SelectedIndex = index;
+                            else
+                                cmbClienteMembresia.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            cmbClienteMembresia.SelectedIndex = -1;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejar errores silenciosamente para evitar interrupciones
+                    clienteSeleccionado = null;
+                }
+            }
+        }
+
+        private void dgvClases_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    claseSeleccionada = (Clase)dgvClases.Rows[e.RowIndex].DataBoundItem;
+                    txtNombreClase.Text = claseSeleccionada.Nombre ?? "";
+                    txtSala.Text = claseSeleccionada.Sala ?? "";
+
+                    // CAMBIAR: Usar nmupCupo en lugar de txtCupo
+                    nmupCupo.Value = claseSeleccionada.CupoDisponible;
+
+                    dtpHorario.Value = claseSeleccionada.Horario;
+                }
+            }
+        }
+
+        private void dgvestadis_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtClienteUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (claseSeleccionada == null)
+            {
+                MessageBox.Show("Selecciona una clase para editar.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNombreClase.Text) ||
+                string.IsNullOrWhiteSpace(txtSala.Text))
+            {
+                MessageBox.Show("Por favor, completa todos los campos obligatorios.");
+                return;
+            }
+
+            // CAMBIAR: Usar nmupCupo.Value directamente
+            int cupoDisponible = (int)nmupCupo.Value;
+
+            if (cupoDisponible < 1)
+            {
+                MessageBox.Show("El cupo debe ser mayor a cero.");
+                return;
+            }
+
+            try
+            {
+                Clase claseActualizada = new Clase
+                {
+                    ClaseID = claseSeleccionada.ClaseID,
+                    Nombre = txtNombreClase.Text.Trim(),
+                    Horario = dtpHorario.Value,
+                    CupoDisponible = cupoDisponible,
+                    Sala = txtSala.Text.Trim()
+                };
+
+                ClaseRepository.ActualizarClase(claseActualizada);
+                MessageBox.Show("Clase actualizada correctamente.");
+                CargarClasesEnGrid();
+                LimpiarCamposClase();
+                claseSeleccionada = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar clase: " + ex.Message);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (claseSeleccionada == null)
+            {
+                MessageBox.Show("Selecciona una clase para eliminar.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("¿Seguro que deseas eliminar esta clase?", "Confirmación", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    ClaseRepository.EliminarClase(claseSeleccionada.ClaseID);
+                    MessageBox.Show("Clase eliminada correctamente.");
+                    CargarClasesEnGrid();
+                    LimpiarCamposClase();
+                    claseSeleccionada = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar clase: " + ex.Message);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvClases.DataSource = null;
+                dgvClases.DataSource = ClaseRepository.ObtenerConCupoDisponible();
+                dgvClases.ClearSelection();
+                MessageBox.Show("Mostrando solo clases con cupo disponible.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar clases: " + ex.Message);
+            }
+        }
+
+        private void nmupCupo_ValueChanged(object sender, EventArgs e)
+        {
+            if (nmupCupo.Value <= 5 && nmupCupo.Value > 0)
+            {
+                nmupCupo.BackColor = Color.LightYellow; // Advertencia cuando queden pocos cupos
+            }
+            else if (nmupCupo.Value == 0)
+            {
+                nmupCupo.BackColor = Color.LightCoral; // Rojo cuando no hay cupo
+            }
+            else
+            {
+                nmupCupo.BackColor = SystemColors.Window; // Color normal
+            }
         }
     }
 }

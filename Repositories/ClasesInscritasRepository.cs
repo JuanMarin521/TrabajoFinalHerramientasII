@@ -11,7 +11,9 @@ namespace Trabajo_final_herramientas_II.Repositories
     {
         private readonly SqlConnection connection;
 
-        private readonly string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+         // private readonly string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+        private readonly string  connectionString = "Data Source=SEBASTIAN;Initial Catalog=Herramientas;Integrated Security=True";
+
 
 
         public ClasesInscritasRepository()

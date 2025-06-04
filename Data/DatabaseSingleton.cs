@@ -11,7 +11,9 @@ namespace Trabajo_final_herramientas_II.Data
         private DatabaseSingleton()
         {
             // Cambia el connection string según tu servidor
-            string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+            //  string connectionString = "Data Source=LAPTOP-5OE3AFLL\\SQLEXPRESS;Initial Catalog=Herramientas;Integrated Security=True";
+            string connectionString = "Data Source=SEBASTIAN;Initial Catalog=Herramientas;Integrated Security=True";
+
             _connection = new SqlConnection(connectionString);
         }
 
